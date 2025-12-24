@@ -12,8 +12,6 @@ const app = express();
 app.use(cors({origin: true}));
 
 // Define Routes
-
-
 app.post("/register", async (req, res) => {
   try {
     const {fullName, dob, position, phone} = req.body;
@@ -28,7 +26,7 @@ app.post("/register", async (req, res) => {
       position,
       phone,
       status: "pending",
-      createdAt: admin.firestore.FieldValue.serverTimestamp(),
+      createdAt: new Date().toISOString(),
     };
 
     // Save to Firestore Collection
