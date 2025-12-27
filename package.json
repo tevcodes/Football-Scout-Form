@@ -3,5 +3,8 @@
     "dotenv": "^17.2.3",
     "firebase": "^12.7.0",
     "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "vitest": "^4.0.16"
   }
 }

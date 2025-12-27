@@ -2,6 +2,9 @@
 
 import axios from 'axios';
 import { ref, computed, } from 'vue';
+import { getMaxDateForAge } from '../utils/validators';
+
+const maxDate = computed(() => getMaxDateForAge(16));
 
 // Data State
 const form = ref({
