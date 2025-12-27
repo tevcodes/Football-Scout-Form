@@ -8,7 +8,8 @@ const form = ref({
     fullName: '',
     dob: '',
     position: 'CM',
-    phone: ''
+    phone: '',
+    currentTeam: ''
 });
 
 const statusMessage = ref('');
@@ -54,7 +55,8 @@ const maxDate = computed(() => {
 <template>
     <div class="card">
         <form @submit.prevent="submitForm">
-            <div class="form-group">
+
+        <div class="form-group">
         <label>Full Name</label>
         <input v-model="form.fullName" type="text" placeholder="e.g. Percy Tau" required />
       </div>
@@ -63,6 +65,11 @@ const maxDate = computed(() => {
         <label>Date of Birth (Must be 16+)</label>
         <input v-model="form.dob" type="date" :max="maxDate" required />
       </div>
+
+      <div class="form-group">
+       <label>Current Team / Academy</label>
+       <input v-model="form.currentTeam" type="text" placeholder="e.g. Kaizer Chiefs U17 or Free Agent" />
+</div>
 
       <div class="form-group">
         <label>Playing Position</label>

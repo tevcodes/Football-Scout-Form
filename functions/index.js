@@ -14,7 +14,7 @@ app.use(cors({origin: true}));
 // Define Routes
 app.post("/register", async (req, res) => {
   try {
-    const {fullName, dob, position, phone} = req.body;
+    const {fullName, dob, position, phone, currentTeam} = req.body;
 
     // Basic Validation
     if (!fullName || !position || !phone) {
@@ -25,6 +25,7 @@ app.post("/register", async (req, res) => {
       dob,
       position,
       phone,
+      currentTeam: currentTeam || "Free Agent",
       status: "pending",
       createdAt: new Date().toISOString(),
     };
