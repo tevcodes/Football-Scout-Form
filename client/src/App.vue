@@ -1,45 +1,36 @@
 <script setup>
-
+import logo from './assets/monkaeLogo.png';
 </script>
 
 <template>
-<div class="container">
-  <div class="header">
-    <h1>⚽ Kasi Scouting</h1>
+<div class="min-h-screen bg-brand-bg font-body">
+ 
+  <nav class="bg-white border-b border-brand-border h-20 flex items-center justify-between px-8 sticky top-0 z-50 shadow-sm">
+    <div class="flex items-center gap-3">
+       <img 
+    :src="logo" 
+    alt="Monkae Footy Tools" 
+    class="h-20 w-auto object-contain" 
+  />
+      </div>
 
-    <nav>
-      <router-link to="/">Register Player</router-link>
-      <router-link to="/login">Scout Login</router-link>
-    </nav>
-  </div>
+      <div class="flex items-center gap-6">
+        <router-link to="/" class="font-semibold text-brand-text hover:text-brand-red transition-colors">
+          Player Registration
+        </router-link>
 
-  <router-view></router-view>
+        <router-link 
+          to="/login" 
+          class="font-heading bg-brand-text text-white px-6 py-2 rounded-full text-sm hover:bg-brand-red transition-all transform hover:-translate-y-1 shadow-md"
+        >
+          SCOUT ACCESS
+        </router-link>
+      </div>
+  </nav>
+
+  <main class="max-w-5xl mx-auto py-10 px-6">
+      <router-view></router-view>
+    </main>
 </div>
 </template>
 
-<style>
-  nav {
-  margin-top: 10px;
-  text-align: center;
-}
-nav a {
-  color: #2563EB;
-  text-decoration: none;
-  font-weight: 600;
-  margin: 0 10px;
-}
-nav a:hover {
-  text-decoration: underline;
-}
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f2f5;
-}
-
-.container {
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 20px;
-}
-</style>
