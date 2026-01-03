@@ -1,6 +1,6 @@
 Monkae Footy Scouting Database (In Development)
 
-A full-stack scouting platform being built to help local leagues streamline player registration and discovery. The goal is to replace paper forms with a digital database that allows scouts to filter talent by specific attributes.
+A full-stack scouting platform being built to help local talent meet endless possibility by being exposed to established teams both locally and eventually internationally via a scouting database. The player will register though a frontend form web app which communicates with a dashboard belonging to teams and scouts subscribed to the service.
 
 ![Status](https://img.shields.io/badge/Status-In_Development-yellow)
 ![Stack](https://img.shields.io/badge/Stack-Vue_3_&_Firebase-orange)
