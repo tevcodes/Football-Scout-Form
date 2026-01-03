@@ -12,6 +12,7 @@ export default {
             'brand-bg': '#f4f7f6',
             'brand-text': '#333333',
             'brand-border': '#e0e0e0',
+            'brand-dark': '#192730'
             },
             fontFamily: {
               heading: ['Orbitron', 'sans-serif'],
