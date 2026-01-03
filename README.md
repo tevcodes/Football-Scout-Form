@@ -18,9 +18,7 @@ A full-stack scouting platform being built to help local leagues streamline play
 ## 🎯 V1 Goals (Upcoming Features)
 I am currently working towards the V1 release, which will include:
 
-1.  **[Feature 1 Name]:** (e.g., Scout Reporting Tool / PDF Export - *Replace this with your feature*)
-2.  **[Feature 2 Name]:** (e.g., Team Management Dashboard - *Replace this with your feature*)
-3.  **Visual Overhaul:** Complete responsive styling using the Monkae Brand System.
+1.  **Visual Overhaul:** Complete responsive styling using the Monkae Brand System.
 
 ## 🛠️ Tech Stack
 * **Frontend:** Vue 3 (Composition API), Vite
@@ -33,7 +31,7 @@ Since this project uses Firebase Emulators, follow these steps to run it offline
 
 1.  **Clone the repo**
     ```bash
-    git clone [your-repo-link]
+    git clone https://github.com/tevcodes/Football-Scout-Form.git
     ```
 
 2.  **Install Dependencies** (Root & Client)
@@ -54,4 +52,4 @@ Since this project uses Firebase Emulators, follow these steps to run it offline
     ```
 
 ---
-*Created by [Your Name] as part of a Full Stack Portfolio.*
+*Created by tevcodes as part of a Full Stack Portfolio.*
