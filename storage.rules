@@ -2,7 +2,7 @@ rules_version = '2';
 service firebase.storage {
   match /b/{bucket}/o {
     match /{allPaths=**} {
-      // 🟢 ALLOW EVERYTHING (For Development/Portfolio)
+      // Allow read/write for everyone (for your MVP/Portfolio)
       allow read, write: if true;
     }
   }

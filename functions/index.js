@@ -14,12 +14,24 @@ app.use(cors({origin: true}));
 // Define Routes
 app.post("/register", async (req, res) => {
   try {
-    const {fullName, dob, position, phone, currentTeam, photoUrl} = req.body;
+    // 1. Extract ALL fields, including the new ones (videoUrl, expiresAt)
+    const {
+      fullName,
+      dob,
+      position,
+      phone,
+      currentTeam,
+      photoUrl,
+      videoUrl, // 👈 NEW
+      expiresAt, // 👈 NEW (For 2-year deletion)
+    } = req.body;
 
     // Basic Validation
     if (!fullName || !position || !phone) {
       return res.status(400).json({error: "Missing required fields"});
     }
+
+    // 2. Create the Player Object
     const newPlayer = {
       fullName,
       dob,
@@ -27,8 +39,10 @@ app.post("/register", async (req, res) => {
       phone,
       currentTeam: currentTeam || "Free Agent",
       photoUrl: photoUrl || null,
+      videoUrl: videoUrl || null, // 👈 Saving it now!
       status: "pending",
       createdAt: new Date().toISOString(),
+      expiresAt: expiresAt || null, // 👈 Saving the expiration date
     };
 
     // Save to Firestore Collection
@@ -44,6 +58,7 @@ app.post("/register", async (req, res) => {
   }
 });
 
+// GET route remains the same...
 app.get("/players", async (req, res) => {
   try {
     const snapshot = await db.collection("registrations").get();

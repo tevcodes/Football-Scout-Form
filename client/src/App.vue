@@ -1,5 +1,5 @@
 <script setup>
-import logo from './assets/monkaeLogo.png';
+import logo from './assets/monkaeLogo.png-removebg-preview.png';
 </script>
 
 <template>
@@ -10,7 +10,7 @@ import logo from './assets/monkaeLogo.png';
        <img 
     :src="logo" 
     alt="Monkae Footy Tools" 
-    class="h-20 w-auto object-contain" 
+    class="h-30 w-auto object-contain" 
   />
       </div>
 
@@ -21,7 +21,7 @@ import logo from './assets/monkaeLogo.png';
 
         <router-link 
           to="/login" 
-          class="font-heading bg-brand-text text-white px-6 py-2 rounded-full text-sm hover:bg-brand-red transition-all transform hover:-translate-y-1 shadow-md"
+          class="font-heading bg-brand-text text-bg-brand-dark px-6 py-2 rounded-full text-sm hover:bg-brand-red transition-all transform hover:-translate-y-1 shadow-md"
         >
           SCOUT ACCESS
         </router-link>

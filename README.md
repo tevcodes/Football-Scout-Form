@@ -1,55 +1,64 @@
-Monkae Footy Scouting Database (In Development)
+# ⚽ Monkae Footy Scouting Database
 
-A full-stack scouting platform being built to help local talent meet endless possibility by being exposed to established teams both locally and eventually internationally via a scouting database. The player will register though a frontend form web app which communicates with a dashboard belonging to teams and scouts subscribed to the service.
+A full-stack, digital scouting platform designed to modernize football recruitment in South Africa. Monkae connects local talent with professional scouts through a verified, data-driven dashboard.
 
-![Status](https://img.shields.io/badge/Status-In_Development-yellow)
-![Stack](https://img.shields.io/badge/Stack-Vue_3_&_Firebase-orange)
+![Status](https://img.shields.io/badge/Status-MVP_Complete-success)
+![Stack](https://img.shields.io/badge/Stack-Vue_3_%7C_Firebase_%7C_Tailwind-blue)
 
-## 🚧 Project Status
-**Current Phase:** Core Logic & Infrastructure
-**Next Phase:** UI/UX Polish & V1 Feature Completion
+## 🚀 Key Features
 
-* ✅ **Backend:** Firebase functions connected and running.
-* ✅ **Database:** Firestore set up with strict typing.
-* ✅ **Auth:** Basic authentication structure in place.
-* ✅ **Uploads:** Image storage logic implemented.
-* 🚧 **UI:** Tailwind styling is currently in progress.
+### 👤 For Players
+* **Digital Profile:** Replaces paper registration with a mobile-first digital form.
+* **Highlight Reel:** Supports **video uploads (up to 20MB)** so players can showcase their best game moments directly on their profile.
+* **Smart Validation:** Enforces age limits (U16 focus) and strict position codes.
 
-## 🎯 V1 Goals (Upcoming Features)
-I am currently working towards the V1 release, which will include:
-
-1.  **Visual Overhaul:** Complete responsive styling using the Monkae Brand System.
+### 🕵️‍♂️ For Scouts (Dashboard)
+* **Visual Screening Room:** Scouts can view headshots, physical stats, and watch video highlights in a "Player Card" modal without leaving the dashboard.
+* **Filtering Engine:** Instantly filter talent by position (GK, DEF, MID, FWD) using strict-type matching.
+* **Secure Access:** Manually verified credentials ensure only legitimate team representatives access the database.
 
 ## 🛠️ Tech Stack
-* **Frontend:** Vue 3 (Composition API), Vite
-* **Styling:** Tailwind CSS (Custom Config)
-* **Backend:** Node.js (Firebase Cloud Functions)
-* **Data:** Firestore (NoSQL) & Firebase Storage
+
+| Layer | Technologies |
+| :--- | :--- |
+| **Frontend** | Vue 3 (Composition API), Vite |
+| **Styling** | Tailwind CSS (Custom "Monkae" Brand System) |
+| **Backend** | Firebase Cloud Functions (Node.js) |
+| **Database** | Firestore (NoSQL) |
+| **Storage** | Firebase Storage (Images & Video) |
 
 ## ⚙️ How to Run Locally
-Since this project uses Firebase Emulators, follow these steps to run it offline:
+
+This project uses the Firebase Emulator Suite to mimic a production environment locally.
 
 1.  **Clone the repo**
     ```bash
-    git clone https://github.com/tevcodes/Football-Scout-Form.git
+    git clone [https://github.com/YOUR_USERNAME/monkae-footy.git](https://github.com/YOUR_USERNAME/monkae-footy.git)
+    cd monkae-footy
     ```
 
-2.  **Install Dependencies** (Root & Client)
+2.  **Install Dependencies**
     ```bash
-    npm install
-    cd client && npm install
+    npm install         # Backend dependencies
+    cd client && npm install  # Frontend dependencies
     ```
 
-3.  **Start the Backend**
+3.  **Start the Backend (Emulators)**
+    From the root folder:
     ```bash
     firebase emulators:start
     ```
 
 4.  **Start the Frontend**
+    From the `client/` folder:
     ```bash
-    cd client
     npm run dev
     ```
 
+## 🔮 Future Roadmap (Production)
+* **PWA Integration:** "Add to Home Screen" functionality for offline scouting.
+* **Team Accounts:** Multi-tenant architecture for teams to manage their own "Shortlists."
+* **Subscription Gate:** Automated billing (Paystack/Yoco) for 3/6/12 month access plans.
+
 ---
-*Created by tevcodes as part of a Full Stack Portfolio.*
+*Built by [Your Name] in Cape Town, SA 🇿🇦*

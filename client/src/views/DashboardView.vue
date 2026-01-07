@@ -217,6 +217,28 @@ const handleLogout = async () => {
                                 <span class="w-2 h-2 rounded-full bg-green-600"></span> Active
                             </p>
                         </div>
+                        <div class="border-t border-gray-100 pt-4 pb-2">
+                        <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
+                            Scout Footage
+                        </h4>
+                        
+                        <div v-if="selectedPlayer.videoUrl" class="rounded-xl overflow-hidden bg-black shadow-lg relative group">
+                            <video 
+                                controls 
+                                preload="metadata"
+                                class="w-full h-auto max-h-64 object-contain mx-auto"
+                            >
+                                <source :src="selectedPlayer.videoUrl" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+
+                        <div v-else class="py-6 bg-gray-50 rounded-xl border border-dashed border-gray-200 text-center">
+                            <p class="text-xs text-gray-400 italic">
+                                📹 No highlight reel available for this player.
+                            </p>
+                        </div>
+                    </div>
                     </div>
 
                     <button class="w-full bg-brand-text text-white font-bold py-3 rounded-xl hover:bg-gray-800 transition shadow-lg">
